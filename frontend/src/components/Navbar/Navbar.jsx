@@ -45,7 +45,7 @@ function Navbar() {
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={toggleHandler} />
 
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {toggle && (
             <motion.div
               key="app__navbar-menu"
