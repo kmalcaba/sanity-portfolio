@@ -1,31 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { images } from "../../constants";
 import { urlFor, client } from "../../client";
 import "./About.scss";
-
-// const abouts = [
-//   {
-//     title: "Web development",
-//     description: "I am a good web developer",
-//     imageurl: images.about01,
-//   },
-//   {
-//     title: "Web design",
-//     description: "I am a good web designer",
-//     imageurl: images.about02,
-//   },
-//   {
-//     title: "UI/UX",
-//     description: "I am a good web developer",
-//     imageurl: images.about03,
-//   },
-//   {
-//     title: "Web animation",
-//     description: "I am a good web animator",
-//     imageurl: images.about04,
-//   },
-// ];
 
 function About() {
   const [abouts, setAbouts] = useState([]);
@@ -49,13 +25,13 @@ function About() {
       <div className="app__profile">
         {abouts.map((about, index) => (
           <motion.div
-            whileInView={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3, type: "tween" }}
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.imageurl} alt={about.title} />
+            <img src={urlFor(about.imageurl)} alt={about.title} />
             <h2 className="bold-text">{about.title}</h2>
             <p className="p-text">{about.description}</p>
           </motion.div>
