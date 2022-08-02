@@ -43,6 +43,7 @@ function Header() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{
           opacity: { duration: 0.5 },
           delayChildren: { duration: 0.5 },
@@ -53,6 +54,7 @@ function Header() {
         <motion.img
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
           transition={{
             opacity: { duration: 0.5 },
             ease: "easeInOut",
@@ -66,6 +68,7 @@ function Header() {
       <motion.div
         variant={scaleVariants}
         whileInView={scaleVariants.whileInView}
+        viewport={{ once: true }}
         className="app__header-circles"
       >
         {[images.react, images.redux, images.sass].map((circle, index) => (
