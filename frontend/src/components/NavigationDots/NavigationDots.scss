@@ -1,0 +1,7 @@
+@import "../../constants/colors.scss";
+
+.app__navigation {
+  .app__navigation-dot.active {
+    background-color: $blue-color;
+  }
+}
