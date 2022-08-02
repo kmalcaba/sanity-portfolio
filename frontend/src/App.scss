@@ -1,6 +1,5 @@
 @import "./constants/colors.scss";
-
-$font-base: "DM Sans", sans-serif;
+@import "./constants/fonts.scss";
 
 .app {
   background-color: $primary-color;
