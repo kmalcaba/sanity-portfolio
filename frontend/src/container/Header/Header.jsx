@@ -1,3 +1,4 @@
+import { AppWrap } from "../../wrapper";
 import { motion } from "framer-motion";
 import "./Header.scss";
 import { images } from "../../constants";
@@ -15,7 +16,7 @@ const scaleVariants = {
 
 function Header() {
   return (
-    <div id="home" className="app__header app__flex">
+    <div className="app__header app__flex">
       <motion.div
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -80,4 +81,5 @@ function Header() {
     </div>
   );
 }
-export default Header;
+
+export default AppWrap(Header, "home");
