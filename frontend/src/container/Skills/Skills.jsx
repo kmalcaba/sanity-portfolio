@@ -23,11 +23,15 @@ function Skills() {
     <>
       <h2 className="head-text">Skills & Experience</h2>
       <div className="app__skills-container">
-        <motion.div className="app__skills-list">
+        <motion.div
+          transition={{ delayChildren: 0.3 }}
+          className="app__skills-list"
+        >
           {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.3 }}
+              viewport={{ once: true }}
               className="app__skills-item app__flex"
               key={skill.name}
             >
